@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    #wrap{
+      position: relative ;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 0.4s ease;
+    }
+    section {
+      height: 100vh; /* 각 섹션의 높이 설정 */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2em;
+    }
+    section:nth-child(odd) {
+      background-color: #f0f0f0; /* 홀수 번째 섹션 배경색 설정 */
+    }
+    section:nth-child(even) {
+      background-color: #e0e0e0; /* 짝수 번째 섹션 배경색 설정 */
+    }
+  </style>
+  <title>Scroll with Wheel Example</title>
+</head>
+<body>
+
+  <div id="wrap">
+    <section id="section1">Section 1</section>
+    <section id="section2">Section 2</section>
+    <section id="section3">Section 3</section>
+  </div>
+
+  <script>
+    // wheel 이벤트 리스너 추가
+    const wrap = document.getElementById('wrap');
+    let page = 0;
+    window.addEventListener('wheel', function(event) {
+      event.preventDefault();
+    
+        event.deltaY > 0 ? page ++ : page--;
+     
+        if(page < 0)page=0;
+        if(page > 2) page = 2;
+        wrap.style.top = `${page * -100}vh`
+        
+      },{passive:false}
+    )
+  </script>
+
+</body>
+</html>
