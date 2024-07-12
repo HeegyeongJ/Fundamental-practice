@@ -1,13 +1,17 @@
 import './App.css';
-import Clock from "./pages/Clock.tsx";
-import {useClock} from "./hooks";
+import HighOrderCallback from "./pages/HighOrderCallback";
+import Callback from "./pages/Callback";
+import Memo from "./pages/Memo";
+import UseOrCreateTest from "./pages/UseOrCreateTest";
+
 
 function App() {
-    const today = useClock()
   return (
     <div className="App">
-      {/*<Clock today={todayRef.current}/>*/}
-        <Clock today={today}/>
+  <HighOrderCallback/>
+      <Callback/>
+      <Memo/>
+      <UseOrCreateTest/>
     </div>
   );
 }
