@@ -3,12 +3,13 @@ import {FC} from "react";
 export type ClockProps = {
     today: Date
 }
-const CopyMe :FC<ClockProps>= ({today}) => {
+const Clock :FC<ClockProps>= ({today}) => {
     return (
-        <div>
-            Copy Me
+        <div >
+            <div>{today.toLocaleTimeString()}</div>
+            <div>{today.toLocaleDateString()}</div>
         </div>
     );
 };
 
-export default CopyMe;
+export default Clock;
