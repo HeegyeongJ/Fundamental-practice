@@ -1,17 +1,16 @@
 import './App.css';
-import HighOrderCallback from "./pages/HighOrderCallback";
-import Callback from "./pages/Callback";
-import Memo from "./pages/Memo";
-import UseOrCreateTest from "./pages/UseOrCreateTest";
-
+import HighOrderCallback from "./pages/HighOrderCallback.tsx";
+import Callback from "./pages/Callback.tsx";
+import Memo from "./pages/Memo.tsx";
+import UseOrCreateTest from "./pages/UseOrCreateTest.tsx";
 
 function App() {
   return (
     <div className="App">
-  <HighOrderCallback/>
-      <Callback/>
-      <Memo/>
-      <UseOrCreateTest/>
+        <HighOrderCallback/>
+        <Callback/>
+        <Memo/>
+        {/*<UseOrCreateTest/>*/}
     </div>
   );
 }

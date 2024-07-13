@@ -1,10 +1,18 @@
+import {useCallback, useMemo} from "react";
+import {makeArray} from "../data/util.ts";
+import {randomName} from "../data/chance.ts";
 
-const CopyMe = () => {
+const Callback = () => {
+    const onClick = useCallback(() => alert('button clicked'),[])
+    const buttons = useMemo(() => makeArray(3).map(randomName).map((name,index)=> (
+        <button key={index} onClick={onClick}>{name}</button>
+    )),[])
     return (
         <div>
-            Copy Me
+            <div>Callback</div>
+            <div>{buttons}</div>
         </div>
     );
 };
 
-export default CopyMe;
+export default Callback;
