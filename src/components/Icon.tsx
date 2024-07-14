@@ -5,10 +5,10 @@ export type IconProps = {
     style?: CSSProperties
 }
 
-const Icon: FC<IconProps> = ({name, style}) => {
+const Icon: FC<IconProps> = ({name, style,...props}) => {
 
     return (
-        <span className='material-icons' style={style}>
+        <span className='material-icons' style={style} {...props}>
             {name}
         </span>
     );

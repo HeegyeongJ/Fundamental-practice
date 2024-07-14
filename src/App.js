@@ -1,16 +1,10 @@
 import './App.css';
-import HighOrderCallback from "./pages/HighOrderCallback.tsx";
-import Callback from "./pages/Callback.tsx";
-import Memo from "./pages/Memo.tsx";
-import UseOrCreateTest from "./pages/UseOrCreateTest.tsx";
+import NumberState from "./pages/NumberState.tsx";
 
 function App() {
   return (
     <div className="App">
-        <HighOrderCallback/>
-        <Callback/>
-        <Memo/>
-        {/*<UseOrCreateTest/>*/}
+  <NumberState/>
     </div>
   );
 }
